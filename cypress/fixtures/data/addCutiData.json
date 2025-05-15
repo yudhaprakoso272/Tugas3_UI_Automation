@@ -1,0 +1,21 @@
+{
+    "cutiEmployee1": {
+        "employee": "budi",
+        "name": "avram budi setiawan",
+        "leave": "Personal",
+        "period": "2025",
+        "entitlement": "2"
+    },
+
+    "requestCuti1": {
+        "leave": "Personal",
+        "fromDate": "16",
+        "toDate": "16",
+        "partialDays": "All Days",
+        "duration": "Full Day"
+    },
+
+    "approveCuti1": {
+        "name": "avram budi setiawan"
+    }
+}

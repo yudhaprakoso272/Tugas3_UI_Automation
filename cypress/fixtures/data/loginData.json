@@ -1,0 +1,11 @@
+{
+    "employeeCredentials": {
+        "username": "budi123",
+        "password": "budi123"
+    },
+
+    "wrongCredentialLogin": {
+        "username": "123",
+        "password": "123"
+    }
+}

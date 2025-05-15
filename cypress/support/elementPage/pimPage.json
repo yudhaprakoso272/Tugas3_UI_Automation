@@ -1,0 +1,10 @@
+{
+    "pimMenu": ".oxd-main-menu-item",
+    "pimHeader": ".oxd-text",
+    "addEmployee": ".oxd-topbar-body-nav-tab-item",
+    "firstname": "input[name='firstName']",
+    "middlename": "input[name='middleName']",
+    "lastname": "input[name='lastName']",
+    "cancelButton": ".oxd-button--ghost",
+    "saveButton": ".oxd-button--secondary"
+}

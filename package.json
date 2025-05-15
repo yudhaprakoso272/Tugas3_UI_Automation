@@ -1,0 +1,24 @@
+{
+  "name": "tugas3_ui_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudhaprakoso272/Tugas3_UI_Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yudhaprakoso272/Tugas3_UI_Automation/issues"
+  },
+  "homepage": "https://github.com/yudhaprakoso272/Tugas3_UI_Automation#readme",
+  "dependencies": {
+    "cypress": "^14.3.3",
+    "dotenv": "^16.5.0"
+  }
+}

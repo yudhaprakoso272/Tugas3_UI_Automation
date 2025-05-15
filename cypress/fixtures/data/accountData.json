@@ -1,0 +1,11 @@
+{
+    "accountData1": {
+        "role": "ESS",
+        "employee": "budi",
+        "name": "avram budi setiawan",
+        "status": "Enabled",
+        "username": "budi123",
+        "password": "budi123",
+        "confirmpass": "budi123"
+    }
+}
