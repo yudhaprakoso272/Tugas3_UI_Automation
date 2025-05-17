@@ -12,19 +12,34 @@ describe('Tugas 3 - Basic UI Automation', () => {
   it('Positive - Add New Employee', () => {
     cy.visit('/')
 
+    // Login Admin
     loginPage.inputLogin({});
     dashboardPage.verifyDashboard();
+
+    // Add New Employee
     pimPage.addNewEmployee(employeeData.employeeData1);
+
+    // Create Account Employee
     adminPage.createAccount(accountData.accountData1);
+
+    // Logout
     logoutPage.logout();
   })
 
-  // it('Negative - Add New Employee', () => {
-  //   cy.visit('/')
+  it('Negative - Add New Employee', () => {
+    cy.visit('/')
 
-  //   loginPage.inputLogin(loginData.wrongCredentialLogin);
-  //   // dashboardPage.verifyDashboard();
-  //   // pimPage.addNewEmployee();
-  //   // adminPage.createAccount();
-  // })
+    // Login Admin
+    loginPage.inputLogin({});
+    dashboardPage.verifyDashboard();
+
+    // Add New Employee
+    pimPage.addNewEmployee(employeeData.employeeData2);
+
+    // Create Account Employee
+    adminPage.createAccount(accountData.accountData2);
+
+    // Logout
+    logoutPage.logout();
+  })
 })

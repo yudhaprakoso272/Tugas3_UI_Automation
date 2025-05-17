@@ -9,13 +9,45 @@
 
     "requestCuti1": {
         "leave": "Personal",
-        "fromDate": "16",
-        "toDate": "16",
+        "fromDate": "2025-05-19",
+        "toDate": "2025-05-19",
         "partialDays": "All Days",
-        "duration": "Full Day"
+        "duration": "Morning"
     },
 
     "approveCuti1": {
         "name": "avram budi setiawan"
+    },
+
+    "verifyCuti1": {
+        "date": "2025-05-19",
+        "name": "avram budi setiawan",
+        "status": "Scheduled"
+    },
+
+    "cutiEmployee2": {
+        "employee": "budi!!!!!",
+        "name": "budi!!!!! avram@@@@@ setiawan#####",
+        "leave": "Personal",
+        "period": "2025",
+        "entitlement": "2"
+    },
+
+    "requestCuti2": {
+        "leave": "Personal",
+        "fromDate": "2025-05-16",
+        "toDate": "2025-05-16",
+        "partialDays": "All Days",
+        "duration": "Full Day"
+    },
+
+    "approveCuti2": {
+        "name": "budi!!!!! avram@@@@@ setiawan#####"
+    },
+
+    "verifyCuti2": {
+        "date": "2025-05-16",
+        "name": "budi!!!!! avram@@@@@ setiawan#####",
+        "status": "Taken"
     }
 }

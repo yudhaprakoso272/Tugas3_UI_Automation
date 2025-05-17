@@ -11,7 +11,7 @@ describe('Tugas 3 - Basic UI Automation', () => {
     cy.visit('/')
 
     // Login Employee
-    loginPage.inputLogin(loginData.employeeCredentials);
+    loginPage.inputLogin(loginData.employeeCredentials1);
     dashboardPage.verifyDashboard();
 
     // Request Cuti
@@ -27,11 +27,39 @@ describe('Tugas 3 - Basic UI Automation', () => {
     logoutPage.logout();
 
     // Login Employee
-    loginPage.inputLogin(loginData.employeeCredentials);
+    loginPage.inputLogin(loginData.employeeCredentials1);
     dashboardPage.verifyDashboard();
 
     // Verify Cuti
-    leavePage.verifyCuti();
+    leavePage.verifyCuti(requestCuti.verifyCuti1);
+    logoutPage.logout();
+  })
+
+  it('Negative - Request Cuti', () => {
+    cy.visit('/')
+
+    // Login Employee
+    loginPage.inputLogin(loginData.employeeCredentials2);
+    dashboardPage.verifyDashboard();
+
+    // Request Cuti
+    leavePage.requestCuti(requestCuti.requestCuti2);
+    logoutPage.logout();
+
+    // Login Admin
+    loginPage.inputLogin({});
+    dashboardPage.verifyDashboard();
+
+    // Approve Cuti
+    leavePage.approveCuti(requestCuti.approveCuti2);
+    logoutPage.logout();
+
+    // Login Employee
+    loginPage.inputLogin(loginData.employeeCredentials2);
+    dashboardPage.verifyDashboard();
+
+    // Verify Cuti
+    leavePage.verifyCuti(requestCuti.verifyCuti2);
     logoutPage.logout();
   })
 })

@@ -7,5 +7,15 @@
         "username": "budi123",
         "password": "budi123",
         "confirmpass": "budi123"
+    },
+
+    "accountData2": {
+        "role": "ESS",
+        "employee": "budi!!!!!",
+        "name": "budi!!!!! avram@@@@@ setiawan#####",
+        "status": "Enabled",
+        "username": "!!!!!123",
+        "password": "budi!!!!!123",
+        "confirmpass": "budi!!!!!123"
     }
 }

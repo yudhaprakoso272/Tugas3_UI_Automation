@@ -46,12 +46,37 @@ class LeavePage {
         cy.contains('Apply Leave');
         cy.get(element.leave).click();
         cy.contains(leave).click();
-        cy.get(element.fromDate).click();
-        cy.contains(fromDate).click();
+        cy.get(element.fromDate).clear().type(fromDate);
+        cy.get(element.toDate).clear().type(toDate);
         cy.get(element.toDate).click();
-        cy.contains(toDate).click();
+        cy.wait(2000);
         // cy.get(element.partialDays).click();
         // cy.contains(partialDays).click();
+        cy.get(element.duration).click();
+        cy.contains(duration).click();
+        cy.get(element.applyButton).contains('Apply').click();
+        cy.wait(1000);
+        cy.contains('Success');
+    }
+
+    requestCuti2({
+        leave, fromDate, toDate,
+        partialDays, duration
+    }){
+        cy.get(element.leaveMenu).contains('Leave').click();
+        cy.wait(2000);
+        cy.get(element.leaveHeader).contains('Leave');
+        cy.get(element.applyTopbar).contains('Apply').click();
+        cy.wait(2000);
+        cy.contains('Apply Leave');
+        cy.get(element.leave).click();
+        cy.contains(leave).click();
+        cy.get(element.fromDate).clear().type(fromDate);
+        cy.get(element.toDate).clear().type(toDate);
+        cy.get(element.toDate).click();
+        cy.wait(2000);
+        cy.get(element.partialDays).click();
+        cy.contains(partialDays).click();
         cy.get(element.duration).click();
         cy.contains(duration).click();
         cy.get(element.applyButton).contains('Apply').click();
@@ -72,21 +97,23 @@ class LeavePage {
         cy.contains('Record Found');
         cy.contains(name);
         cy.get(element.approveButton).contains('Approve').click();
-        cy.get(element.rejectButton).contains('Reject').click();
+        // cy.get(element.rejectButton).contains('Reject').click();
         cy.wait(1000);
         cy.contains('Success');
     }
 
-    verifyCuti(){
+    verifyCuti({
+        date, name, status
+    }){
         cy.get(element.leaveMenu).contains('Leave').click();
         cy.wait(2000);
         cy.get(element.leaveHeader).contains('Leave');
         cy.get(element.myLeave).contains('My Leave').click();
         cy.contains('Records Found');
-        cy.contains('2025-16-05');
-        cy.contains('avram budi setiawan');
+        cy.contains(date);
+        cy.contains(name);
         cy.wait(1000);
-        cy.get(element.tabelStatus).contains('Scheduled');
+        cy.get(element.tabelStatus).contains(status);
         cy.wait(2000);
     }
 }

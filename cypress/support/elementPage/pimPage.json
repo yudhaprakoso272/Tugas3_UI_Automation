@@ -5,6 +5,7 @@
     "firstname": "input[name='firstName']",
     "middlename": "input[name='middleName']",
     "lastname": "input[name='lastName']",
+    "numberId": ".oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input",
     "cancelButton": ".oxd-button--ghost",
     "saveButton": ".oxd-button--secondary"
 }

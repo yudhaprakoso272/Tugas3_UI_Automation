@@ -7,6 +7,7 @@ class AdminPage {
     }){
         cy.get(element.adminMenu).contains('Admin').click();
         cy.get(element.adminHeader).contains('Admin');
+        cy.wait(1000);
         cy.get(element.add).contains('Add').click();
         cy.get(element.inputRole).click();
         cy.contains(role).click();

@@ -9,9 +9,28 @@ describe('Tugas 3 - Basic UI Automation', () => {
   it('Positive - Add Cuti New Employee', () => {
     cy.visit('/')
 
+    // Login Admin
     loginPage.inputLogin({});
     dashboardPage.verifyDashboard();
+
+    // Add Cuti New Employee
     leavePage.addCuti(addCutiData.cutiEmployee1);
+
+    // Logout
+    logoutPage.logout();
+  })
+
+  it('Negative - Add Cuti New Employee', () => {
+    cy.visit('/')
+
+    // Login Admin
+    loginPage.inputLogin({});
+    dashboardPage.verifyDashboard();
+
+    // Add Cuti New Employee
+    leavePage.addCuti(addCutiData.cutiEmployee2);
+
+    // Logout
     logoutPage.logout();
   })
 })
